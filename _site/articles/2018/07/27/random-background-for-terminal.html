@@ -7,24 +7,24 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width initial-scale=1">
 
-<meta property="og:title" content="Lawrence's Blog">
-<title>Lawrence's Blog</title>
-<meta property="og:description" content="">
-<meta property="og:url" content="http://localhost:4000/">
+<meta property="og:title" content="配置iTerm终端使用随机图片背景">
+<title>配置iTerm终端使用随机图片背景</title>
+<meta property="og:description" content="Chrome有个叫Momentum的插件是我比较喜欢用的，其中一点是它在打开新标签页时，每天都有一张新的地理图片显示。那么问题来了，终端是平时工作中经常使用和面对的界面，能不能在终端实现类似效果提高日常工作的体验（以及demo时的逼格）？目标每次创建一个新的终端Tab的时候，有随机的背景图片，效果如下事前准备 :...">
+<meta property="og:url" content="http://localhost:4000/articles/2018/07/27/random-background-for-terminal.html">
 <meta property="og:site_name" content="Lawrence's Blog">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@lawr_li">
 <meta name="twitter:creator" content="@lawr_li">
-<meta name="twitter:title" content="Lawrence's Blog">
-<meta name="twitter:description" content="">
-<meta name="twitter:url" content="http://localhost:4000/">
+<meta name="twitter:title" content="配置iTerm终端使用随机图片背景">
+<meta name="twitter:description" content="Chrome有个叫Momentum的插件是我比较喜欢用的，其中一点是它在打开新标签页时，每天都有一张新的地理图片显示。那么问题来了，终端是平时工作中经常使用和面对的界面，能不能在终端实现类似效果提高日常工作的体验（以及demo时的逼格）？目标每次创建一个新的终端Tab的时候，有随机的背景图片，效果如下事前准备 :...">
+<meta name="twitter:url" content="http://localhost:4000/articles/2018/07/27/random-background-for-terminal.html">
 
 <meta name="keywords" content="blog">
 
 <link rel="icon" href="/images/favicon.ico">
 <link rel="stylesheet" href="/css/main.css">
-<link rel="canonical" href="http://localhost:4000/">
+<link rel="canonical" href="http://localhost:4000/articles/2018/07/27/random-background-for-terminal.html">
 <link rel="alternate" type="application/atom+xml" title="Lawrence's Blog" href="http://localhost:4000/feed.xml" />
 
 <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -99,51 +99,46 @@
     
 
   <div class="page-content col-sm-8">
-    <div class="home">
-  <div class="post" itemscope itemtype="http://schema.org/BlogPosting" >
-    
-    
-  
-    <header class="post-header">
-      <h1 itemprop="name" class="post-title">
-        <a itemprop="url" class="post-link" href="/articles/2018/07/27/random-background-for-terminal.html">配置iTerm终端使用随机图片背景</a>
-      </h1>
-      <meta itemprop="keywords" content="terminal,iTerm,trick,script,automation,脚本,终端,自动化,原创" />
-      <p class="post-meta">
-      Posted in
-      
-      <a href="/categories/#articles">articles</a>
-      
-      
-      and tagged
-      
-      <a href="/tags/#terminal" title="terminal">terminal</a>, 
-      
-      <a href="/tags/#iTerm" title="iTerm">iTerm</a>, 
-      
-      <a href="/tags/#trick" title="trick">trick</a>, 
-      
-      <a href="/tags/#script" title="script">script</a>, 
-      
-      <a href="/tags/#automation" title="automation">automation</a>, 
-      
-      <a href="/tags/#脚本" title="脚本">脚本</a>, 
-      
-      <a href="/tags/#终端" title="终端">终端</a>, 
-      
-      <a href="/tags/#自动化" title="自动化">自动化</a>, 
-      
-      <a href="/tags/#原创" title="原创">原创</a>
-      
-      
-      <time itemprop="datePublished" datetime="2018-07-27">
-      on Jul 27, 2018
-      </time>
-      </p>
-    </header>
+    <div class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-    <article class="post-content" itemprop="articleBody">
-      <p>Chrome有个叫Momentum的插件是我比较喜欢用的，其中一点是它在打开新标签页时，每天都有一张新的地理图片显示。那么问题来了，终端是平时工作中经常使用和面对的界面，能不能在终端实现类似效果提高日常工作的体验（以及demo时的逼格）？</p>
+  <header class="post-header">
+    <h1 itemprop="name" class="post-title">配置iTerm终端使用随机图片背景</h1>
+    <meta itemprop="keywords" content="terminal,iTerm,trick,script,automation,脚本,终端,自动化,原创" />
+    <p class="post-meta">
+    Posted in
+    
+    <a href="/categories/#articles">articles</a>
+     
+    
+    and tagged
+    
+    <a href="/tags/#terminal" title="terminal">terminal</a>, 
+    
+    <a href="/tags/#iTerm" title="iTerm">iTerm</a>, 
+    
+    <a href="/tags/#trick" title="trick">trick</a>, 
+    
+    <a href="/tags/#script" title="script">script</a>, 
+    
+    <a href="/tags/#automation" title="automation">automation</a>, 
+    
+    <a href="/tags/#脚本" title="脚本">脚本</a>, 
+    
+    <a href="/tags/#终端" title="终端">终端</a>, 
+    
+    <a href="/tags/#自动化" title="自动化">自动化</a>, 
+    
+    <a href="/tags/#原创" title="原创">原创</a>
+    
+    
+    <time itemprop="datePublished" datetime="2018-07-27">
+    on Jul 27, 2018
+    </time>
+    </p>
+  </header>
+
+  <article class="post-content" itemprop="articleBody">
+    <p>Chrome有个叫Momentum的插件是我比较喜欢用的，其中一点是它在打开新标签页时，每天都有一张新的地理图片显示。那么问题来了，终端是平时工作中经常使用和面对的界面，能不能在终端实现类似效果提高日常工作的体验（以及demo时的逼格）？</p>
 
 <p><strong>目标</strong></p>
 
@@ -223,218 +218,40 @@
 
 <h1>？？？？？？</h1>
 
-    </article> <hr />
-    
-    
-  
-    <header class="post-header">
-      <h1 itemprop="name" class="post-title">
-        <a itemprop="url" class="post-link" href="/articles/2014/12/13/simple-post.html">Sample Post</a>
-      </h1>
-      <meta itemprop="keywords" content="sample-post" />
-      <p class="post-meta">
-      Posted in
-      
-      <a href="/categories/#articles">articles</a>
-      
-      
-      and tagged
-      
-      <a href="/tags/#sample-post" title="sample-post">sample-post</a>
-      
-      
-      <time itemprop="datePublished" datetime="2014-12-13">
-      on Dec 13, 2014
-      </time>
-      </p>
-    </header>
-
-    <article class="post-content" itemprop="articleBody">
-      <ul id="markdown-toc">
-  <li><a href="#heading" id="markdown-toc-heading">Heading</a></li>
-  <li><a href="#body-text" id="markdown-toc-body-text">Body text</a></li>
-  <li><a href="#blockquotes" id="markdown-toc-blockquotes">Blockquotes</a></li>
-  <li><a href="#list-types" id="markdown-toc-list-types">List Types</a>    <ul>
-      <li><a href="#ordered-lists" id="markdown-toc-ordered-lists">Ordered Lists</a></li>
-      <li><a href="#unordered-lists" id="markdown-toc-unordered-lists">Unordered Lists</a></li>
-    </ul>
-  </li>
-  <li><a href="#tables" id="markdown-toc-tables">Tables</a></li>
-  <li><a href="#code-snippets" id="markdown-toc-code-snippets">Code Snippets</a>    <ul>
-      <li><a href="#highlight-with-line-number" id="markdown-toc-highlight-with-line-number">highlight with line number.</a></li>
-      <li><a href="#highlight-using-triple-backticks" id="markdown-toc-highlight-using-triple-backticks">highlight using triple backticks</a></li>
-    </ul>
-  </li>
-  <li><a href="#latex" id="markdown-toc-latex"><script type="math/tex">\LaTeX</script></a></li>
-  <li><a href="#q-tag" id="markdown-toc-q-tag">&lt;q&gt; tag</a></li>
-</ul>
-
-<p>This is a sample post.</p>
-
-<p>Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.</p>
-
-<h2 id="heading">Heading</h2>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Heading 1
-
-## Heading 2
-
-### Heading 3
-
-#### Heading 4
-</code></pre></div></div>
-
-<h2 id="body-text">Body text</h2>
-
-<p><strong>This is strong</strong>.</p>
-
-<p>This is figure</p>
-
-<p><img src="https://i.imgur.com/Mdc4szJl.jpg" alt="Elaphurus davidianus" title="Père David's deer" /></p>
-
-<p><em>This is emphasized</em>.</p>
-
-<p>53 = 125. Water is H<sub>2</sub>O.</p>
-
-<p>The New York Times <cite>(That’s a citation)</cite>.</p>
-
-<p><u>Underline</u>.</p>
-
-<p><del>HTML and CSS are our tools</del>.</p>
-
-<h2 id="blockquotes">Blockquotes</h2>
-
-<blockquote>
-  <p>Justification:
-This species is listed as Extinct in the Wild, as all populations are still under captive management. The captive population in China has increased in recent years, and the possibility remains that free-ranging populations can be established some time in the near future. When that happens, its Red List status will need to be reassessed.</p>
-</blockquote>
-
-<blockquote>
-  <p>I follow up the quest. Despite of day and night and death and hell.</p>
-  <center> -- Idylls of the King, Tennyson </center>
-</blockquote>
-
-<h2 id="list-types">List Types</h2>
-
-<h3 id="ordered-lists">Ordered Lists</h3>
-
-<ol>
-  <li>Item one
-    <ol>
-      <li>sub item one</li>
-      <li>sub item two</li>
-      <li>sub item three</li>
-    </ol>
-  </li>
-  <li>Item two</li>
-</ol>
-
-<h3 id="unordered-lists">Unordered Lists</h3>
-
-<ul>
-  <li>Item one</li>
-  <li>Item two</li>
-  <li>Item three</li>
-</ul>
-
-<h2 id="tables">Tables</h2>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Header1</th>
-      <th style="text-align: center">Header2</th>
-      <th style="text-align: right">Header3</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">cell1</td>
-      <td style="text-align: center">cell2</td>
-      <td style="text-align: right">cell3</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">cell4</td>
-      <td style="text-align: center">cell5</td>
-      <td style="text-align: right">cell6</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">cell7</td>
-      <td style="text-align: center">cell8</td>
-      <td style="text-align: right">cell9</td>
-    </tr>
-  </tbody>
-</table>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: center">Kingdom</th>
-      <th style="text-align: center">Phylum</th>
-      <th style="text-align: center">Class</th>
-      <th style="text-align: center">Order</th>
-      <th style="text-align: center">Family</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: center">ANIMALIA</td>
-      <td style="text-align: center">CHORDATA</td>
-      <td style="text-align: center">MAMMALIA</td>
-      <td style="text-align: center">CETARTIODACTYLA</td>
-      <td style="text-align: center">CERVIDAE</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 id="code-snippets">Code Snippets</h2>
-
-<p>Syntax highlighting via Pygments</p>
-
-<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nf">#container</span> <span class="p">{</span>
-  <span class="nl">float</span><span class="p">:</span> <span class="nb">left</span><span class="p">;</span>
-  <span class="nl">margin</span><span class="p">:</span> <span class="m">0</span> <span class="m">-240px</span> <span class="m">0</span> <span class="m">0</span><span class="p">;</span>
-  <span class="nl">width</span><span class="p">:</span> <span class="m">100%</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
-
-<h4 id="highlight-with-line-number">highlight with line number.</h4>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
-2
-3
-</pre></td><td class="code"><pre><span class="k">def</span> <span class="nf">foo</span>
-  <span class="nb">puts</span> <span class="s1">'foo'</span>
-<span class="k">end</span></pre></td></tr></tbody></table></code></pre></figure>
-
-<h4 id="highlight-using-triple-backticks">highlight using triple backticks</h4>
-
-<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">a</span><span class="o">=</span><span class="m">1</span><span class="o">:</span><span class="m">10</span><span class="w">
-</span><span class="k">for</span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">a</span><span class="p">)</span><span class="w">
-</span><span class="p">{</span><span class="w">
-  </span><span class="n">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w">
-</span><span class="p">}</span><span class="w">
-
-
-</span></code></pre></div></div>
-
-<h2 id="latex"><script type="math/tex">\LaTeX</script></h2>
-
-<p>you can use latex with <q>double $$ </q></p>
-
-<script type="math/tex; mode=display">e^{i\pi}+1=0</script>
-
-<h2 id="q-tag">&lt;q&gt; tag</h2>
-
-<p>here is a &lt;q&gt; q tag &lt;/q&gt;</p>
-
-<p>here is a <q> q tag </q></p>
-
-    </article> <hr />
-    
-    
-  
-  </div>
+  </article>
+  <hr />
 </div>
+
+
+<section class="pager">
+  <ul>
+    
+    <li class="previous"><a href="/articles/2014/12/13/simple-post.html" title="Sample Post">&larr; Older</a></li>
+    
+    
+    <li class="disabled"><a>Newer &rarr;</a></li>
+    
+  </ul>
+</section>
+
+<div id="disqus_thread"></div>
+
+<script type="text/javascript">
+
+  var disqus_developer = 1;
+
+var disqus_shortname ='gitlawr';
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
 
     <section class="pager">
   

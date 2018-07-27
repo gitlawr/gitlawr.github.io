@@ -1,14 +1,314 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2017-04-20T16:06:50+08:00</updated><id>http://localhost:4000/</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-</subtitle><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2017/04/20/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2017-04-20T16:05:00+08:00</published><updated>2017-04-20T16:05:00+08:00</updated><id>http://localhost:4000/jekyll/update/2017/04/20/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2017/04/20/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lawrence's Blog</title>
+    <description></description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/zfeed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 27 Jul 2018 23:29:39 +0800</pubDate>
+    <lastBuildDate>Fri, 27 Jul 2018 23:29:39 +0800</lastBuildDate>
+    <generator>Jekyll v3.8.3</generator>
+    
+      <item>
+        <title>配置iTerm终端使用随机图片背景</title>
+        <description>&lt;p&gt;Chrome有个叫Momentum的插件是我比较喜欢用的，其中一点是它在打开新标签页时，每天都有一张新的地理图片显示。那么问题来了，终端是平时工作中经常使用和面对的界面，能不能在终端实现类似效果提高日常工作的体验（以及demo时的逼格）？&lt;/p&gt;
 
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;目标&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
+&lt;p&gt;每次创建一个新的终端Tab的时候，有随机的背景图片，效果如下&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;img src=&quot;https://github.com/gitlawr/gitlawr.github.io/raw/master/images/2018-07-27/demo.gif&quot; alt=&quot;Sample&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
+&lt;p&gt;&lt;strong&gt;事前准备&lt;/strong&gt; :&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Mac OS 环境&lt;/li&gt;
+  &lt;li&gt;安装iTerm2&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;iTerm2 是个在Mac OS环境下可以取代原生终端的利器，它的安装和使用就不在这里赘述了，具体可以访问它的&lt;a href=&quot;https://www.iterm2.com/&quot;&gt;官网&lt;/a&gt;或者搜索引擎查下。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;配置步骤&lt;/strong&gt; :&lt;/p&gt;
+
+&lt;p&gt;iTerm的配置很丰富，但是像我们这样的需求自然是不能直接配出来的。但我们可以利用它的脚本实现扩展和自动化，具体步骤如下：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;首先进入iTerm的Preferences，选中Profiles&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;选择你用到的Profile，在右边的Profile详细配置中点击Window标签&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://github.com/gitlawr/gitlawr.github.io/raw/master/images/2018-07-27/window-conf.jpg&quot; alt=&quot;window-conf&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;我们要用到的就是这里的修改背景图片的设置，但是这里的设置是作用于所有标签的，不能达到我们的目的。我们先在这里调整Blending设置。这可以改变背景图片显示效果的深浅。我们自然不希望背景会喧宾夺主影响我们查看终端的输入输出信息。可以先任意配一张背景图片，调整完blending值再去掉勾选。像下图这样能看清楚终端文字：&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://github.com/gitlawr/gitlawr.github.io/raw/master/images/2018-07-27/bg-test.jpg&quot; alt=&quot;bg-test&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;实现创建tab时更新背景图片的脚本，保存在任意路径下，如&lt;code class=&quot;highlighter-rouge&quot;&gt;/Users/abc/NewTabWithBg.scpt&lt;/code&gt;。
+    &lt;div class=&quot;language-applescript highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;tell&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;application&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;iTerm&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+ &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;tell&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;current&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+     &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;tab&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;with&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;profile&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+ &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;tell&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+ &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;tell&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;current&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;session&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;of&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;current&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;window&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+     &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;background&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;na&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;to&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/tmp/rdimg.jpg&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+ &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;tell&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;tell&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;do shell script&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/usr/local/bin/wget -O /tmp/tmprdimg.jpg https://picsum.photos/1400/800?random &amp;amp;&amp;amp; cp /tmp/tmprdimg.jpg /tmp/rdimg.jpg&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;上面使用了AppleScript，关于iTerm对AppleScript的支持，可以参考&lt;a href=&quot;https://www.iterm2.com/documentation-scripting.html&quot;&gt;此处&lt;/a&gt;。
+这里做的，就是创建一个新的iTerm标签，并且设置它的背景图片为&lt;code class=&quot;highlighter-rouge&quot;&gt;/tmp/rdimg.jpg&lt;/code&gt;。由于从网络下载图片会有延时，所以选择在建完标签页之后，再更新和替换一张图片。这样每次打开新标签页都是新图片。一个缺点是第一次打开的时候由于&lt;code class=&quot;highlighter-rouge&quot;&gt;/tmp/rdimg.jpg&lt;/code&gt;不存在，没有背景图。另一点是在离线环境，或者连续新建多个标签页且新图片还没下载完，使用的还是先前的图片。当然你也可以选择在本地存一批图片作为图源来避免延时和网络要求，你可以权衡利弊按需调整脚本。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;设置快捷键来使用上述脚本。在iTerm Preferences - Keys 中，点击右下方的&lt;code class=&quot;highlighter-rouge&quot;&gt;+&lt;/code&gt;按钮，添加热键。&lt;/p&gt;
+
+    &lt;p&gt;&lt;img src=&quot;https://github.com/gitlawr/gitlawr.github.io/raw/master/images/2018-07-27/set-key.png&quot; alt=&quot;set-key&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;点击 Keyboard Shortcut，然后键盘输入&lt;code class=&quot;highlighter-rouge&quot;&gt;⌘+t&lt;/code&gt;，即默认的新建标签快捷键。在Action列表中，选择Run Coprocess。 在底下的命令输入框中输入&lt;code class=&quot;highlighter-rouge&quot;&gt;osascript &quot;/Users/abc/NewTabWithBg.scpt&quot;&lt;/code&gt;。此处的路径按上述脚本保存的路径进行配置。最后点击Ok进行保存。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;完成！接下来就可以打开iTerm，用&lt;code class=&quot;highlighter-rouge&quot;&gt;⌘+t&lt;/code&gt;创建标签页，来体验效果。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;备注&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;关于图源的选择，除了上述的picsum.photos，还有不少网站可以提供随机图片获取的服务，比如：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;http://placeimg.com/1400/800/any&lt;/li&gt;
+  &lt;li&gt;https://source.unsplash.com/random/1400x800&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Unsplash 还可以按某个collection，某个用户喜好，以及某些关键字进行图片获取。
+我期待地搓了搓手，然后把脚本中的图源URL改成：&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;https://source.unsplash.com/featured/1400x800?lady,beauty
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;建个Tab看看&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/gitlawr/gitlawr.github.io/raw/master/images/2018-07-27/lady.png&quot; alt=&quot;set-key&quot; /&gt;&lt;/p&gt;
+
+&lt;h1&gt;？？？？？？&lt;/h1&gt;
+</description>
+        <pubDate>Fri, 27 Jul 2018 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/articles/2018/07/27/random-background-for-terminal.html</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2018/07/27/random-background-for-terminal.html</guid>
+        
+        <category>terminal</category>
+        
+        <category>iTerm</category>
+        
+        <category>trick</category>
+        
+        <category>script</category>
+        
+        <category>automation</category>
+        
+        <category>脚本</category>
+        
+        <category>终端</category>
+        
+        <category>自动化</category>
+        
+        <category>原创</category>
+        
+        
+        <category>articles</category>
+        
+      </item>
+    
+      <item>
+        <title>Sample Post</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#heading&quot; id=&quot;markdown-toc-heading&quot;&gt;Heading&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#body-text&quot; id=&quot;markdown-toc-body-text&quot;&gt;Body text&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#blockquotes&quot; id=&quot;markdown-toc-blockquotes&quot;&gt;Blockquotes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#list-types&quot; id=&quot;markdown-toc-list-types&quot;&gt;List Types&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#ordered-lists&quot; id=&quot;markdown-toc-ordered-lists&quot;&gt;Ordered Lists&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#unordered-lists&quot; id=&quot;markdown-toc-unordered-lists&quot;&gt;Unordered Lists&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#tables&quot; id=&quot;markdown-toc-tables&quot;&gt;Tables&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#code-snippets&quot; id=&quot;markdown-toc-code-snippets&quot;&gt;Code Snippets&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#highlight-with-line-number&quot; id=&quot;markdown-toc-highlight-with-line-number&quot;&gt;highlight with line number.&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#highlight-using-triple-backticks&quot; id=&quot;markdown-toc-highlight-using-triple-backticks&quot;&gt;highlight using triple backticks&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#latex&quot; id=&quot;markdown-toc-latex&quot;&gt;&lt;script type=&quot;math/tex&quot;&gt;\LaTeX&lt;/script&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#q-tag&quot; id=&quot;markdown-toc-q-tag&quot;&gt;&amp;lt;q&amp;gt; tag&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This is a sample post.&lt;/p&gt;
+
+&lt;p&gt;Below is just about everything you’ll need to style in the theme. Check the source code to see the many embedded elements within paragraphs.&lt;/p&gt;
+
+&lt;h2 id=&quot;heading&quot;&gt;Heading&lt;/h2&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Heading 1
+
+## Heading 2
+
+### Heading 3
+
+#### Heading 4
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;body-text&quot;&gt;Body text&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;This is strong&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;This is figure&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/Mdc4szJl.jpg&quot; alt=&quot;Elaphurus davidianus&quot; title=&quot;Père David's deer&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;This is emphasized&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;53 = 125. Water is H&lt;sub&gt;2&lt;/sub&gt;O.&lt;/p&gt;
+
+&lt;p&gt;The New York Times &lt;cite&gt;(That’s a citation)&lt;/cite&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;u&gt;Underline&lt;/u&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;del&gt;HTML and CSS are our tools&lt;/del&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;blockquotes&quot;&gt;Blockquotes&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Justification:
+This species is listed as Extinct in the Wild, as all populations are still under captive management. The captive population in China has increased in recent years, and the possibility remains that free-ranging populations can be established some time in the near future. When that happens, its Red List status will need to be reassessed.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I follow up the quest. Despite of day and night and death and hell.&lt;/p&gt;
+  &lt;center&gt; -- Idylls of the King, Tennyson &lt;/center&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;list-types&quot;&gt;List Types&lt;/h2&gt;
+
+&lt;h3 id=&quot;ordered-lists&quot;&gt;Ordered Lists&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Item one
+    &lt;ol&gt;
+      &lt;li&gt;sub item one&lt;/li&gt;
+      &lt;li&gt;sub item two&lt;/li&gt;
+      &lt;li&gt;sub item three&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Item two&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;unordered-lists&quot;&gt;Unordered Lists&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Item one&lt;/li&gt;
+  &lt;li&gt;Item two&lt;/li&gt;
+  &lt;li&gt;Item three&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;tables&quot;&gt;Tables&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;Header1&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Header2&lt;/th&gt;
+      &lt;th style=&quot;text-align: right&quot;&gt;Header3&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;cell1&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;cell2&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;cell3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;cell4&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;cell5&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;cell6&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;cell7&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;cell8&lt;/td&gt;
+      &lt;td style=&quot;text-align: right&quot;&gt;cell9&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Kingdom&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Phylum&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Class&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Order&lt;/th&gt;
+      &lt;th style=&quot;text-align: center&quot;&gt;Family&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;ANIMALIA&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;CHORDATA&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;MAMMALIA&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;CETARTIODACTYLA&lt;/td&gt;
+      &lt;td style=&quot;text-align: center&quot;&gt;CERVIDAE&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;code-snippets&quot;&gt;Code Snippets&lt;/h2&gt;
+
+&lt;p&gt;Syntax highlighting via Pygments&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nf&quot;&gt;#container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;-240px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;highlight-with-line-number&quot;&gt;highlight with line number.&lt;/h4&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;foo&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'foo'&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;highlight-using-triple-backticks&quot;&gt;highlight using triple backticks&lt;/h4&gt;
+
+&lt;div class=&quot;language-r highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;k&quot;&gt;in&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+
+
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;latex&quot;&gt;&lt;script type=&quot;math/tex&quot;&gt;\LaTeX&lt;/script&gt;&lt;/h2&gt;
+
+&lt;p&gt;you can use latex with &lt;q&gt;double $$ &lt;/q&gt;&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;e^{i\pi}+1=0&lt;/script&gt;
+
+&lt;h2 id=&quot;q-tag&quot;&gt;&amp;lt;q&amp;gt; tag&lt;/h2&gt;
+
+&lt;p&gt;here is a &amp;lt;q&amp;gt; q tag &amp;lt;/q&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;here is a &lt;q&gt; q tag &lt;/q&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sat, 13 Dec 2014 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/articles/2014/12/13/simple-post.html</link>
+        <guid isPermaLink="true">http://localhost:4000/articles/2014/12/13/simple-post.html</guid>
+        
+        <category>sample-post</category>
+        
+        
+        <category>articles</category>
+        
+      </item>
+    
+  </channel>
+</rss>

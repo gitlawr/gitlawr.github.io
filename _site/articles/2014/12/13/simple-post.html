@@ -7,24 +7,24 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width initial-scale=1">
 
-<meta property="og:title" content="Lawrence's Blog">
-<title>Lawrence's Blog</title>
-<meta property="og:description" content="">
-<meta property="og:url" content="http://localhost:4000/">
+<meta property="og:title" content="Sample Post">
+<title>Sample Post</title>
+<meta property="og:description" content="Just about everything you'll need to style in the theme: headings, paragraphs, blockquotes, tables, code blocks, and more.">
+<meta property="og:url" content="http://localhost:4000/articles/2014/12/13/simple-post.html">
 <meta property="og:site_name" content="Lawrence's Blog">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@lawr_li">
 <meta name="twitter:creator" content="@lawr_li">
-<meta name="twitter:title" content="Lawrence's Blog">
-<meta name="twitter:description" content="">
-<meta name="twitter:url" content="http://localhost:4000/">
+<meta name="twitter:title" content="Sample Post">
+<meta name="twitter:description" content="Just about everything you'll need to style in the theme: headings, paragraphs, blockquotes, tables, code blocks, and more.">
+<meta name="twitter:url" content="http://localhost:4000/articles/2014/12/13/simple-post.html">
 
 <meta name="keywords" content="blog">
 
 <link rel="icon" href="/images/favicon.ico">
 <link rel="stylesheet" href="/css/main.css">
-<link rel="canonical" href="http://localhost:4000/">
+<link rel="canonical" href="http://localhost:4000/articles/2014/12/13/simple-post.html">
 <link rel="alternate" type="application/atom+xml" title="Lawrence's Blog" href="http://localhost:4000/feed.xml" />
 
 <script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -99,158 +99,30 @@
     
 
   <div class="page-content col-sm-8">
-    <div class="home">
-  <div class="post" itemscope itemtype="http://schema.org/BlogPosting" >
+    <div class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 itemprop="name" class="post-title">Sample Post</h1>
+    <meta itemprop="keywords" content="sample-post" />
+    <p class="post-meta">
+    Posted in
+    
+    <a href="/categories/#articles">articles</a>
+     
+    
+    and tagged
+    
+    <a href="/tags/#sample-post" title="sample-post">sample-post</a>
     
     
-  
-    <header class="post-header">
-      <h1 itemprop="name" class="post-title">
-        <a itemprop="url" class="post-link" href="/articles/2018/07/27/random-background-for-terminal.html">配置iTerm终端使用随机图片背景</a>
-      </h1>
-      <meta itemprop="keywords" content="terminal,iTerm,trick,script,automation,脚本,终端,自动化,原创" />
-      <p class="post-meta">
-      Posted in
-      
-      <a href="/categories/#articles">articles</a>
-      
-      
-      and tagged
-      
-      <a href="/tags/#terminal" title="terminal">terminal</a>, 
-      
-      <a href="/tags/#iTerm" title="iTerm">iTerm</a>, 
-      
-      <a href="/tags/#trick" title="trick">trick</a>, 
-      
-      <a href="/tags/#script" title="script">script</a>, 
-      
-      <a href="/tags/#automation" title="automation">automation</a>, 
-      
-      <a href="/tags/#脚本" title="脚本">脚本</a>, 
-      
-      <a href="/tags/#终端" title="终端">终端</a>, 
-      
-      <a href="/tags/#自动化" title="自动化">自动化</a>, 
-      
-      <a href="/tags/#原创" title="原创">原创</a>
-      
-      
-      <time itemprop="datePublished" datetime="2018-07-27">
-      on Jul 27, 2018
-      </time>
-      </p>
-    </header>
+    <time itemprop="datePublished" datetime="2014-12-13">
+    on Dec 13, 2014
+    </time>
+    </p>
+  </header>
 
-    <article class="post-content" itemprop="articleBody">
-      <p>Chrome有个叫Momentum的插件是我比较喜欢用的，其中一点是它在打开新标签页时，每天都有一张新的地理图片显示。那么问题来了，终端是平时工作中经常使用和面对的界面，能不能在终端实现类似效果提高日常工作的体验（以及demo时的逼格）？</p>
-
-<p><strong>目标</strong></p>
-
-<p>每次创建一个新的终端Tab的时候，有随机的背景图片，效果如下</p>
-
-<p><img src="https://github.com/gitlawr/gitlawr.github.io/raw/master/images/2018-07-27/demo.gif" alt="Sample" /></p>
-
-<p><strong>事前准备</strong> :</p>
-
-<ol>
-  <li>Mac OS 环境</li>
-  <li>安装iTerm2</li>
-</ol>
-
-<p>iTerm2 是个在Mac OS环境下可以取代原生终端的利器，它的安装和使用就不在这里赘述了，具体可以访问它的<a href="https://www.iterm2.com/">官网</a>或者搜索引擎查下。</p>
-
-<p><strong>配置步骤</strong> :</p>
-
-<p>iTerm的配置很丰富，但是像我们这样的需求自然是不能直接配出来的。但我们可以利用它的脚本实现扩展和自动化，具体步骤如下：</p>
-
-<ol>
-  <li>
-    <p>首先进入iTerm的Preferences，选中Profiles</p>
-  </li>
-  <li>
-    <p>选择你用到的Profile，在右边的Profile详细配置中点击Window标签</p>
-
-    <p><img src="https://github.com/gitlawr/gitlawr.github.io/raw/master/images/2018-07-27/window-conf.jpg" alt="window-conf" /></p>
-  </li>
-  <li>
-    <p>我们要用到的就是这里的修改背景图片的设置，但是这里的设置是作用于所有标签的，不能达到我们的目的。我们先在这里调整Blending设置。这可以改变背景图片显示效果的深浅。我们自然不希望背景会喧宾夺主影响我们查看终端的输入输出信息。可以先任意配一张背景图片，调整完blending值再去掉勾选。像下图这样能看清楚终端文字：</p>
-
-    <p><img src="https://github.com/gitlawr/gitlawr.github.io/raw/master/images/2018-07-27/bg-test.jpg" alt="bg-test" /></p>
-  </li>
-  <li>实现创建tab时更新背景图片的脚本，保存在任意路径下，如<code class="highlighter-rouge">/Users/abc/NewTabWithBg.scpt</code>。
-    <div class="language-applescript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">tell</span><span class="w"> </span><span class="nb">application</span><span class="w"> </span><span class="s2">"iTerm"</span><span class="w">
- </span><span class="k">tell</span><span class="w"> </span><span class="nv">current</span><span class="w"> </span><span class="na">window</span><span class="w">
-     </span><span class="nv">create</span><span class="w"> </span><span class="nv">tab</span><span class="w"> </span><span class="nv">with</span><span class="w"> </span><span class="nv">default</span><span class="w"> </span><span class="nv">profile</span><span class="w">
- </span><span class="k">end</span><span class="w"> </span><span class="k">tell</span><span class="w">
- </span><span class="k">tell</span><span class="w"> </span><span class="nv">current</span><span class="w"> </span><span class="nv">session</span><span class="w"> </span><span class="k">of</span><span class="w"> </span><span class="nv">current</span><span class="w"> </span><span class="na">window</span><span class="w">
-     </span><span class="k">set</span><span class="w"> </span><span class="nv">background</span><span class="w"> </span><span class="na">image</span><span class="w"> </span><span class="k">to</span><span class="w"> </span><span class="s2">"/tmp/rdimg.jpg"</span><span class="w">
- </span><span class="k">end</span><span class="w"> </span><span class="k">tell</span><span class="w">
-</span><span class="k">end</span><span class="w"> </span><span class="k">tell</span><span class="w">
-</span><span class="nb">do shell script</span><span class="w"> </span><span class="s2">"/usr/local/bin/wget -O /tmp/tmprdimg.jpg https://picsum.photos/1400/800?random &amp;&amp; cp /tmp/tmprdimg.jpg /tmp/rdimg.jpg"</span><span class="w">
-</span></code></pre></div>    </div>
-    <p>上面使用了AppleScript，关于iTerm对AppleScript的支持，可以参考<a href="https://www.iterm2.com/documentation-scripting.html">此处</a>。
-这里做的，就是创建一个新的iTerm标签，并且设置它的背景图片为<code class="highlighter-rouge">/tmp/rdimg.jpg</code>。由于从网络下载图片会有延时，所以选择在建完标签页之后，再更新和替换一张图片。这样每次打开新标签页都是新图片。一个缺点是第一次打开的时候由于<code class="highlighter-rouge">/tmp/rdimg.jpg</code>不存在，没有背景图。另一点是在离线环境，或者连续新建多个标签页且新图片还没下载完，使用的还是先前的图片。当然你也可以选择在本地存一批图片作为图源来避免延时和网络要求，你可以权衡利弊按需调整脚本。</p>
-  </li>
-  <li>
-    <p>设置快捷键来使用上述脚本。在iTerm Preferences - Keys 中，点击右下方的<code class="highlighter-rouge">+</code>按钮，添加热键。</p>
-
-    <p><img src="https://github.com/gitlawr/gitlawr.github.io/raw/master/images/2018-07-27/set-key.png" alt="set-key" /></p>
-  </li>
-  <li>
-    <p>点击 Keyboard Shortcut，然后键盘输入<code class="highlighter-rouge">⌘+t</code>，即默认的新建标签快捷键。在Action列表中，选择Run Coprocess。 在底下的命令输入框中输入<code class="highlighter-rouge">osascript "/Users/abc/NewTabWithBg.scpt"</code>。此处的路径按上述脚本保存的路径进行配置。最后点击Ok进行保存。</p>
-  </li>
-  <li>完成！接下来就可以打开iTerm，用<code class="highlighter-rouge">⌘+t</code>创建标签页，来体验效果。</li>
-</ol>
-
-<p><strong>备注</strong></p>
-
-<p>关于图源的选择，除了上述的picsum.photos，还有不少网站可以提供随机图片获取的服务，比如：</p>
-
-<ul>
-  <li>http://placeimg.com/1400/800/any</li>
-  <li>https://source.unsplash.com/random/1400x800</li>
-</ul>
-
-<p>Unsplash 还可以按某个collection，某个用户喜好，以及某些关键字进行图片获取。
-我期待地搓了搓手，然后把脚本中的图源URL改成：</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>https://source.unsplash.com/featured/1400x800?lady,beauty
-</code></pre></div></div>
-
-<p>建个Tab看看</p>
-
-<p><img src="https://github.com/gitlawr/gitlawr.github.io/raw/master/images/2018-07-27/lady.png" alt="set-key" /></p>
-
-<h1>？？？？？？</h1>
-
-    </article> <hr />
-    
-    
-  
-    <header class="post-header">
-      <h1 itemprop="name" class="post-title">
-        <a itemprop="url" class="post-link" href="/articles/2014/12/13/simple-post.html">Sample Post</a>
-      </h1>
-      <meta itemprop="keywords" content="sample-post" />
-      <p class="post-meta">
-      Posted in
-      
-      <a href="/categories/#articles">articles</a>
-      
-      
-      and tagged
-      
-      <a href="/tags/#sample-post" title="sample-post">sample-post</a>
-      
-      
-      <time itemprop="datePublished" datetime="2014-12-13">
-      on Dec 13, 2014
-      </time>
-      </p>
-    </header>
-
-    <article class="post-content" itemprop="articleBody">
-      <ul id="markdown-toc">
+  <article class="post-content" itemprop="articleBody">
+    <ul id="markdown-toc">
   <li><a href="#heading" id="markdown-toc-heading">Heading</a></li>
   <li><a href="#body-text" id="markdown-toc-body-text">Body text</a></li>
   <li><a href="#blockquotes" id="markdown-toc-blockquotes">Blockquotes</a></li>
@@ -429,12 +301,40 @@ This species is listed as Extinct in the Wild, as all populations are still unde
 
 <p>here is a <q> q tag </q></p>
 
-    </article> <hr />
-    
-    
-  
-  </div>
+  </article>
+  <hr />
 </div>
+
+
+<section class="pager">
+  <ul>
+    
+    <li class="disabled"><a>&larr; Older</a></li>
+    
+    
+    <li class="next"><a href="/articles/2018/07/27/random-background-for-terminal.html" title="配置iTerm终端使用随机图片背景">Newer &rarr;</a></li>
+    
+  </ul>
+</section>
+
+<div id="disqus_thread"></div>
+
+<script type="text/javascript">
+
+  var disqus_developer = 1;
+
+var disqus_shortname ='gitlawr';
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function() {
+  var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+  dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
 
     <section class="pager">
   
